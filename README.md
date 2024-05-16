@@ -62,3 +62,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ```
+
+
+## Docker
+Ejecutar los comandos desde una terminal.
+
+### 0- Requisitos
+- Imagen base: mobiledevops/android-sdk-image
+  https://hub.docker.com/r/mobiledevops/android-sdk-image
+- Elegir imagen de acuerdo al SDK de android y versión de Java
+### 1- Asignar permisos
+`chmod +x entrypoint.sh`
+
+### 2- Crear imagen docker
+Desde la ruta raiz del proyecto (donde se encuentra el archivo Dockerfile), ejeuctar:
+`docker build -t habits-app .`
+
+Ver la imagen generada:
+`docker image ls | grep habits-app`
+
+### 2- Generar APK
