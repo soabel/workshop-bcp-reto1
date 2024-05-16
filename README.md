@@ -81,4 +81,6 @@ Desde la ruta raiz del proyecto (donde se encuentra el archivo Dockerfile), ejeu
 Ver la imagen generada:
 `docker image ls | grep habits-app`
 
-### 2- Generar APK
+### 3- Generar artefacto ejecutando un contenedor
+
+`docker run --rm -v $(pwd)/android-outputs/habits-app:/app/build/outputs/apk/release habits-app:latest`
